@@ -1,0 +1,2 @@
+*** Variables ***
+${MacBook}        Macbook pro

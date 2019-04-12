@@ -1,0 +1,12 @@
+*** Settings ***
+Resource          ../UserDefined Keywords/common methods/Common_operation.robot
+Resource          ../UserDefined Keywords/Purchase Bundles/buying_MacBook.robot
+Resource          ../UserDefined Keywords/Purchase Bundles/buying_headphones.robot
+
+*** Test Cases ***
+MacBook_purchase
+    Login operation
+    Comment    Run Keyword And Ignore Error    Delete previous added cart items
+    Add headphones to the cart
+    Add MacBook pro
+    Checkout

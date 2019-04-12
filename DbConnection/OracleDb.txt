@@ -1,0 +1,5 @@
+*** Settings ***
+
+*** Keywords ***
+ODBconnection
+    Connect To Database Using Custom Params    cx_Oracle    'CBS_VIEW_INT/CBSVIEWINT@172.20.31.130:1521/mtodc'

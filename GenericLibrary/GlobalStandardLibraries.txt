@@ -1,0 +1,11 @@
+*** Settings ***
+Library           ExtendedSelenium2Library    2
+Library           DatabaseLibrary
+Library           String
+Library           DateTime
+Library           Collections
+Library           json
+Library           SudsLibrary
+Library           MongoDBLibrary
+Library           TecnotreeCustomLibrary.py
+Library           OperatingSystem
