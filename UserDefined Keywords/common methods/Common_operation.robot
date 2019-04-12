@@ -46,6 +46,7 @@ Checkout
     Click Element    ${continue_to_payment}
     Wait Until Page Contains Element    ${deliver_to_address}    5
     Click Element    ${deliver_to_address}
+    Scroll Element Into View    ${continue_to_checkout}
     Wait Until Page Contains Element    ${continue_to_checkout}    5
     Click Element    ${continue_to_checkout}
     Sleep    5
@@ -55,6 +56,7 @@ Checkout
     Go Back
     Go Back
     Go Back
+    Sleep    4
     Wait Until Page Contains Element    ${logout_dropdown}    5
     Mouse Over    ${logout_dropdown}
     Sleep    2
