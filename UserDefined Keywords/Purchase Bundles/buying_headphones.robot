@@ -4,6 +4,7 @@ Resource          ../../Object Repository/Products/headphone_locators.robot
 
 *** Keywords ***
 Add headphones to the cart
+    #trying to select first headphone from Electronics department and adding to cart
     Wait Until Page Contains Element    ${search_bar}    5
     Click Element    ${filter}
     Wait Until Page Contains Element    ${select_headphone}    5
@@ -13,6 +14,7 @@ Add headphones to the cart
     Click Element    ${select_first_headphone}
     Click Element    ${select_range}
     sleep    5
+    # switching window
     Select Window    NEW
     ${child_window}    Get Title
     Switch Browser    1

@@ -7,6 +7,7 @@ Resource          ../../Object Repository/Common_object_Locators/login_locators.
 
 *** Keywords ***
 Login operation
+    # Trying to login Amzon account
     Open Browser    ${url}    ${Browser}
     Maximize Browser Window
     Click Element    ${sign_in}
@@ -14,15 +15,18 @@ Login operation
     Click Element    ${continue_event}
     Input Text    ${password}    ${password_value}
     Click Element    ${login}
+    # As it asks for OTP verification lets try to skip this mobile verification as of now
     Click Element    ${skip_&_continue}
 
 Checkout
+    # Navgating to new Buy cart page
     Click Element    ${click_on_cart}
     Wait Until Page Contains Element    ${delete_item}    5
     Click Element    ${delete_item}
     Click Element    ${reduce_item}
     Click Element    ${reduce_to_one}
     Click Element    ${proceed_to_buy}
+    # Entering Address details Randomly with the help of random package and selecting default address
     ${NAME}    Generate Random String    10    [LETTERS]
     Run Keyword And Ignore Error    Input Text    ${Full_name}    ${NAME}
     ${NUMBER}    Generate Random String    10    [NUMBERS]
@@ -45,6 +49,7 @@ Checkout
     Wait Until Page Contains Element    ${continue_to_checkout}    5
     Click Element    ${continue_to_checkout}
     Sleep    5
+    # Navigating to landing page of amazon to sign out
     Go Back
     Go Back
     Go Back
